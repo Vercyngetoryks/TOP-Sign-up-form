@@ -59,3 +59,34 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.container-left {
+  background-image: url(./img/pic.jpg);
+  background-size: cover;
+  background-position: center, center;
+  flex: 0 0 33%;
+}
+
+.logo-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+}
+
+.logo-text {
+  color: #fff;
+  font-family: "norsebold";
+  font-size: 10rem;
+}
