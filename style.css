@@ -60,21 +60,49 @@ h6 {
   isolation: isolate;
 }
 
+body {
+  background: #111;
+}
+
 .container {
   display: flex;
   height: 100vh;
+  width: 75%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .container-left {
   background-image: url(./img/pic.jpg);
   background-size: cover;
   background-position: center, center;
-  flex: 0 0 33%;
+  flex: 0 0 35%;
+  position: relative;
+}
+
+.credits {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.credits a:link,
+.credits a:visited {
+  color: #fff;
+}
+
+.credits a:hover,
+.credits a:active {
+  color: #ccc;
 }
 
 .logo-box {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
+  padding: 1rem;
   margin-top: 20rem;
   display: flex;
   justify-content: center;
@@ -89,4 +117,99 @@ h6 {
   color: #fff;
   font-family: "norsebold";
   font-size: 10rem;
+}
+
+.container-right {
+  background: #eee;
+  flex: 1;
+}
+
+.text-box {
+  margin-top: 16rem;
+  margin-left: 5rem;
+  font-family: sans-serif;
+  max-width: 80%;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.text-cta {
+  margin-bottom: 2rem;
+}
+
+.text-encouragment {
+  margin-bottom: 4rem;
+}
+
+.form {
+  background: #fff;
+  padding: 1rem 5rem;
+  box-shadow: 0 2px 5px #bbb;
+}
+
+.form h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1em;
+}
+
+form {
+  font-family: sans-serif;
+  /* max-width: 80%; */
+  display: inline-block;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  margin-right: 6rem;
+}
+
+label {
+  display: inline-block;
+  text-transform: uppercase;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 250px;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+}
+
+input + span {
+  position: relative;
+}
+
+input + span::after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 1.2rem;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::after {
+  content: "* Passwords do not match";
+  color: red;
+}
+
+input:focus {
+  box-shadow: 2px 2px 5px #999;
+  outline-style: solid;
+  outline-color: rgb(71, 128, 250);
 }
